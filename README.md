@@ -1,6 +1,6 @@
 # [奇客谷](http://www.qikegu.com) spring boot 教程代码
 
-1. [Spring Boot 介绍](http://www.qikegu.com/2018/12/27/spring-boot-%e4%bb%8b%e7%bb%8d/)
+1. [Spring Boot 介绍](http://www.qikegu.com/2018/12/27/spring-boot-%e4%bb%8b%e7%bb%8d/){:target="_blank"}
 2. [spring boot 开发环境搭建（Eclipse）](http://www.qikegu.com/2018/12/29/spring-boot-%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba%ef%bc%88eclipse%ef%bc%89/)
 3. [spring boot hello world (restful接口)例子](http://www.qikegu.com/2018/12/30/spring-boot-hello-world-restful%e6%8e%a5%e5%8f%a3%e4%be%8b%e5%ad%90/)
 4. [spring boot 连接 mysql](http://www.qikegu.com/2019/01/01/785/)
