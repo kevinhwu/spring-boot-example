@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ 
+<generatorConfiguration>
+    <!--导入配置文件-->
+    <properties resource="application.properties"></properties>
+ 
+ 	<!-- 一个数据库一个context --> 
+    <context id="default">
+ 
+        <!-- 注释生成设置 --> 
+        <commentGenerator>
+        	<!-- 是否生成注释代时间戳-->  
+            <property name="suppressDate" value="true" />
+            <!-- 是否取消注释 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+ 
+        <!--jdbc的数据库连接-->
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        	<property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+ 
+        <!-- 类型转换 -->  
+        <javaTypeResolver>
+			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->  
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+ 
+        <!-- targetPackage：生成的实体类所在的包 -->
+        <!-- targetProject：生成的实体类所在的硬盘位置 -->
+        <javaModelGenerator targetPackage="com.qikegu.demo.model" targetProject="src/main/java">
+            <!-- 是否允许子包 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 是否对modal添加构造函数 -->
+            <property name="constructorBased" value="true" />
+            <!-- 是否清理从数据库中查询出的字符串左右两边的空白字符 -->
+            <property name="trimStrings" value="true" />
+            <!-- 建立modal对象是否不可改变 即生成的modal对象不会有setter方法，只有构造方法 -->
+            <property name="immutable" value="false" />
+        </javaModelGenerator>
+ 
+        <!-- targetPackage 和 targetProject：生成的  mapper xml 文件的包和位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <!-- 是否在当前路径下新加一层schema,ex：false路径com.qikegu.demo.model， com.qikegu.demo.model.[schemaName] -->  
+            <property name="enableSubPackages" value="false" />
+            <!-- 是否针对string类型的字段在set的时候进行trim调用 -->  
+            <property name="trimStrings" value="true"/> 
+        </sqlMapGenerator>
+ 
+        <!-- targetPackage 和  targetProject：生成的  java interface 文件的包和位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.qikegu.demo.repository" 
+                             targetProject="src/main/java">
+            <!-- 是否在当前路径下新加一层schema,ex：false路径com.qikegu.demo.model， com.qikegu.demo.model.[schemaName] --> 
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+        
+        <!-- 配置表信息 --> 
+        <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample, 是否生成 example类   -->  
+        <!-- 不同的表，修改tableName和domainObjectName就可以 -->
+        <table tableName="user" domainObjectName="User"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+    </context>
+</generatorConfiguration>

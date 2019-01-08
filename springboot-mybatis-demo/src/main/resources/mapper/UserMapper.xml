@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qikegu.demo.repository.UserMapper">
+  <resultMap id="BaseResultMap" type="com.qikegu.demo.model.User">
+    <constructor>
+      <idArg column="id" javaType="_long" jdbcType="BIGINT" />
+      <arg column="nickname" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="mobile" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="password" javaType="java.lang.String" jdbcType="CHAR" />
+      <arg column="role" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+	id, nickname, mobile, password, role
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="_long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>
