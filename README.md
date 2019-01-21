@@ -10,3 +10,5 @@
 * [spring boot集成mybatis(3) – mybatis generator 配置](http://www.qikegu.com/2019/01/07/spring-boot%e9%9b%86%e6%88%90mybatis3-mybatis-generator-%e9%85%8d%e7%bd%ae/)
 * [spring boot 接口返回值封装](http://www.qikegu.com/2019/01/08/spring-boot-%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E5%80%BC%E5%B0%81%E8%A3%85/)
 * [spring boot输入数据校验(validation)](http://www.qikegu.com/2019/01/09/spring-boot%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8Cvalidation/)
+* [spring boot rest 接口集成 spring security(1) – 最简配置](http://www.qikegu.com/spring-boot-tutorial/910/)
+* [spring boot rest 接口集成 spring security(2) – JWT配置](http://www.qikegu.com/spring-boot-tutorial/1002/)
