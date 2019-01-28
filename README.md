@@ -13,4 +13,4 @@
 11. [spring boot rest 接口集成 spring security(1) – 最简配置](http://www.qikegu.com/spring-boot-tutorial/910/)
 12. [spring boot rest 接口集成 spring security(2) – JWT配置](http://www.qikegu.com/spring-boot-tutorial/1002/)
 13. [spring boot 异常(exception)处理](http://www.qikegu.com/spring-boot-tutorial/1016/)
-14. [spring boot 异常(exception)处理](http://www.qikegu.com/spring-boot-tutorial/1030/)
+14. [spring boot 环境配置（profile）切换](http://www.qikegu.com/spring-boot-tutorial/1030/)
